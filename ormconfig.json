@@ -1,0 +1,41 @@
+[
+  {
+    "name": "development",
+    "type": "postgres",
+    "host": "isilo.db.elephantsql.com",
+    "port": 5432,
+    "username": "zbkudrkb",
+    "password": "WmNUXc8XfB5OdaMHPCTG09b5GMjsJuH8",
+    "database": "zbkudrkb",
+    "synchronize": true,
+    "logging": false,
+    "entities": ["src/entity/**/*.ts"],
+    "migrations": ["src/migration/**/*.ts"],
+    "subscribers": ["src/subscriber/**/*.ts"],
+    "cli": {
+      "entitiesDir": "src/entity",
+      "migrationsDir": "src/migration",
+      "subscribersDir": "src/subscriber"
+    }
+  },
+  {
+    "name": "test",
+    "type": "postgres",
+    "host": "isilo.db.elephantsql.com",
+    "port": 5432,
+    "username": "yatfbvgv",
+    "password": "wHJ-hjqwbkgJjWU2gQDYomIKI0JgLYXo",
+    "database": "yatfbvgv",
+    "synchronize": true,
+    "logging": false,
+    "dropSchema": true,
+    "entities": ["src/entity/**/*.ts"],
+    "migrations": ["src/migration/**/*.ts"],
+    "subscribers": ["src/subscriber/**/*.ts"],
+    "cli": {
+      "entitiesDir": "src/entity",
+      "migrationsDir": "src/migration",
+      "subscribersDir": "src/subscriber"
+    }
+  }
+]
