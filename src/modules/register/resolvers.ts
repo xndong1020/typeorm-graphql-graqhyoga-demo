@@ -5,7 +5,8 @@ import { ResolverMap } from '../../types/graphql-utils'
 import { User } from '../../entity/User'
 
 export const resolvers: ResolverMap = {
-  Query: {
+  // dummy Query for fixing exiting bug from graghql-tool: must have at least 1 query
+  Query: { 
     stub: () => {
       return 'Bye'
     }

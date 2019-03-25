@@ -1,3 +1,4 @@
+# dummy Query for fixing exiting bug from graghql-tool: must have at least 1 query
 type Query {
   stub : String
 }
