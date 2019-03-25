@@ -1,8 +1,9 @@
 import 'reflect-metadata'
 import { request } from 'graphql-request'
-import { User } from '../entity/User'
-import { startServer } from '../utils/startServer'
+
 import { AddressInfo } from 'net'
+import { startServer } from '../../utils/startServer';
+import { User } from '../../entity/User';
 
 const fakeEmail = 'test@test.com'
 const fakePassword = 'fakePassword'
