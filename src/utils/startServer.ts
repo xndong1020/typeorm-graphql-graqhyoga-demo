@@ -12,6 +12,8 @@ export const startServer = async () => {
   const folders: string[] = fs.readdirSync(path.join(__dirname, '../modules'))
   // import all subschemas from src/modules folder
   folders.forEach(folder => {
+    // DO NOT import modules/shared folder
+    if (folder.indexOf('shared') != -1) return
     const { resolvers } = require(`../modules/${folder}/resolvers`)
     const typeDefs = importSchema(
       path.join(__dirname, `../modules/${folder}/schema.graphql`)
@@ -23,7 +25,6 @@ export const startServer = async () => {
   const server = new GraphQLServer({
     schema: mergeSchemas({ schemas })
   })
-
 
   await createTypeOrmConn()
   // make sure test and development server are running on different port

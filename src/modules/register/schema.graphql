@@ -1,8 +1,13 @@
+# import Error from "../shared/schema.graphql"
+
+
 # dummy Query for fixing exiting bug from graghql-tool: must have at least 1 query
 type Query {
-  stub : String
+  stub: String
 }
 
+# [Error!] means if it is either null, or an array then it can't be empty
+# [Error!]! means if can't be null
 type Mutation {
-  register(email: String!, password: String!): Boolean
+  register(email: String!, password: String!): [Error!]
 }
